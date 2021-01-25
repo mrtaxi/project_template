@@ -13,12 +13,12 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh -i "aws_id_rsa" ubuntu@ec2-18-218-188-216.us-east-2.compute.amazonaws.com \'hostname\''
+                sh 'ssh -i ~/.ssh/aws_id_rsa ubuntu@ec2-18-218-188-216.us-east-2.compute.amazonaws.com \'hostname\''
             }
         }
         stage("Second step") {
             steps {
-                sh 'ssh -i "aws_id_rsa" ubuntu@ec2-18-218-188-216.us-east-2.compute.amazonaws.com \'uptime\''
+                sh 'ssh -i ~/.ssh/aws_id_rsa ubuntu@ec2-18-218-188-216.us-east-2.compute.amazonaws.com \'uptime\''
             }
         }
     }
