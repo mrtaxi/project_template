@@ -13,12 +13,12 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh root@ub1 \'hostname\''
+                sh 'ssh ubuntu@ec2-18-218-188-216.us-east-2.compute.amazonaws.com \'hostname\''
             }
         }
         stage("Second step") {
             steps {
-                sh 'ssh root@ub1 \'uptime\''
+                sh 'ssh ubuntu@ec2-18-218-188-216.us-east-2.compute.amazonaws.com \'uptime\''
             }
         }
     }
